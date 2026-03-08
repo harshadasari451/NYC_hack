@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+frontend/.next/
+
+# Python
+backend/venv/
+__pycache__/
+*.pyc
+
+# Environment variables (contains API keys!)
+.env
+backend/.env
+
+# Uploads
+backend/uploads/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
