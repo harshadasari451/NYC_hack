@@ -1,0 +1,130 @@
+.videoPage {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-primary);
+}
+
+.videoBackground {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.roomPlaceholder {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% 30%, rgba(236, 72, 153, 0.08), transparent),
+    linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #1a1a2e 100%);
+}
+
+.roomGradient {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 50% 50% at 30% 40%, rgba(0, 212, 170, 0.04), transparent),
+    radial-gradient(ellipse 40% 40% at 70% 60%, rgba(124, 58, 237, 0.04), transparent);
+}
+
+.avatarSection {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  animation: slideUp 0.6s ease;
+}
+
+.avatarRing {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-pink), var(--accent-secondary));
+  padding: 4px;
+  animation: float 3s ease-in-out infinite;
+  box-shadow: 0 0 60px rgba(236, 72, 153, 0.2);
+}
+
+.avatarInner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--bg-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 64px;
+}
+
+.callerName {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.callStatus {
+  font-size: 16px;
+  color: var(--accent-pink);
+  font-weight: 500;
+}
+
+.callHint {
+  font-size: 13px;
+  color: var(--text-muted);
+  max-width: 300px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.videoActions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding: 24px;
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid var(--border-color);
+}
+
+.actionBtnSmall {
+  width: 48px !important;
+  height: 48px !important;
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  font-size: 20px !important;
+}
+
+.actionBtnSmall:hover {
+  background: var(--bg-card-hover) !important;
+  border-color: var(--accent-primary) !important;
+}
+
+.endCallBtn {
+  width: 64px !important;
+  height: 64px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, #ef4444, #b91c1c) !important;
+  color: white !important;
+  font-size: 24px !important;
+  box-shadow: 0 4px 20px rgba(239, 68, 68, 0.3) !important;
+}
+
+.endCallBtn:hover {
+  box-shadow: 0 6px 30px rgba(239, 68, 68, 0.4) !important;
+  transform: translateY(-2px) !important;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
